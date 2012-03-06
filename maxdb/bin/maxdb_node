@@ -7,4 +7,5 @@ Dir.glob("*.jar").each { |path|
  }
 end
 Dir.chdir(File.expand_path('../../lib',__FILE__))
+#passing config path
 exec("java -cp #{classpath} com.sap.jpaas.services.maxdb.MaxDBServiceNode -pid #{Process.pid()} #{ARGV.dup.join(' ')}")
